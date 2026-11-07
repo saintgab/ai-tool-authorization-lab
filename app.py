@@ -9,7 +9,7 @@ from scenarios import MaliciousModel, provenance
 
 st.set_page_config(page_title='AI Tool Authorization Lab', page_icon='🔐')
 st.title('AI Tool Authorization Lab')
-st.caption('Synthetic local lab · malicious stub · no API key needed · revision 0.4')
+st.caption('Synthetic local lab · malicious stub · no API key needed · revision 0.5')
 st.warning('Local demonstration only. Demo personas are not production authentication.')
 if 'directory' not in st.session_state:
     st.session_state.directory = tempfile.TemporaryDirectory(prefix='authorization-lab-')

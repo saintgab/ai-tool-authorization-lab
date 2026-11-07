@@ -168,7 +168,7 @@ Malformed proposals, including missing `ticket_id` or status and invalid argumen
 - An approved same-user malicious action is **not blocked**: intent recognition and user attention remain unresolved.
 - No production authentication, public-web CSRF review, distributed approvals, or external-system side effects are implemented.
 - UI dependency ranges are not a tested lockfile. Freeze resolved versions after your first successful UI installation.
-- Live evidence has been verified. The latest optional Streamlit interaction tests, recorded video, and independent reproduction remain outstanding before claiming portfolio completion.
+- Live evidence files have been verified against their SHA-256 manifest. The local automated suite passed all 126 tests and 8 subtests with Streamlit installed. A recorded demonstration and independent reproduction remain outstanding.
 
 No employer code or data was used. Review applicable agreements before public release. See [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
 
@@ -183,7 +183,7 @@ The model-entry caption and button now say **Run model (malicious stub)**. Appro
 
 `.streamlit/config.toml` sets `toolbarMode = "minimal"` for a cleaner recording. Dismiss any “Help agents write better apps” popup using its X; popup state belongs to your local browser and was not changed remotely. Toolbar behavior depends on your installed Streamlit version; the config does not establish a public deployment security boundary.
 
-Five optional Streamlit AppTest cases are included. In the build environment, 121 non-UI tests passed and those five tests skipped because Streamlit was unavailable. After installing requirements locally, rerun unittest discovery: **all 126 tests should run**, including default-persona selection, source-aware review, persona switching, checkbox gating, and rejection. The earlier screenshot establishes that revision 0.2 ran on your Mac; revision 0.5 runtime verification is still pending.
+Five Streamlit AppTest cases cover default-persona selection, source-aware review, persona switching, checkbox gating, and rejection. With dependencies installed locally, `python -m pytest -q` completed successfully: **126 tests passed and 8 subtests passed**, with no failures or skips. The Streamlit application was also launched locally and its interactive scenarios exercised manually; those manual outcomes have not been independently audited. These results do not establish production deployment security or independent reproducibility.
 
 
 ## Deterministic off-task control and linked investigation (0.4)
