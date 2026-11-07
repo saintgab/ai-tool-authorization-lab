@@ -1,5 +1,17 @@
 # AI Tool Authorization Lab — revision 0.5
 
+## Watch the Security Demonstration
+
+[Watch the 64-second security demo](demo/protected-authorization-demo.mp4)
+
+This synthetic demonstration shows an attacker-controlled ticket comment attempting to redirect an assistant into changing another ticket using the legitimate user's privileges.
+
+The protected backend requires a trusted approval decision. The user rejects the off-task proposal, the audit trail records the rejection, and the targeted ticket remains open.
+
+**Scope:** The recording uses a deterministic malicious stub to demonstrate backend authorization enforcement. It does not prove that a live AI model followed the injected instruction.
+
+
+
 **Ownership checks do not stop prompt injection that targets the user's own data.** Alice asks the assistant to summarize ticket 3. A comment authored by Bob, who has comment-only access, tells the assistant to close ticket 1, which also belongs to Alice. Ownership passes; the backend's separate UI approval gate blocks the unrequested change. This is a confused-deputy scenario: another person's attacker-controlled tool data attempts to redirect an assistant that acts with the victim's own privileges. If Alice rubber-stamps the off-task proposal, it succeeds. Approval is a human decision boundary, not a complete prompt-injection defense.
 
 **Demo:** [two-minute walkthrough](DEMO.md). A recorded video is not included yet.
