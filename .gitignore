@@ -5,3 +5,6 @@ __pycache__/
 
 # Local Python virtual environment
 .venv/
+
+# macOS metadata
+.DS_Store
