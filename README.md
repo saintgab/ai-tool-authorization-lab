@@ -2,7 +2,7 @@
 
 ## Watch the Security Demonstration
 
-[Watch the 64-second security demo](demo/protected-authorization-demo.mp4)
+[Watch the 64-second security demo](https://github.com/user-attachments/assets/50aa5510-6a82-4e86-987d-6d7f72a86a38)
 
 This synthetic demonstration shows an attacker-controlled ticket comment attempting to redirect an assistant into changing another ticket using the legitimate user's privileges.
 
